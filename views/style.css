@@ -1,7 +1,8 @@
-header{
+header {
     text-align: right;
     padding:0px;
 }
+
 footer {
     background-color: #52ab98;
     padding: 10px;
@@ -17,12 +18,14 @@ footer {
     padding: 30px;
     min-height:5em;
 }
+
 h1 {
     font-family: 'Roboto Slab', serif;
     font-weight: 700 !important;
     color: white;
     margin-right:30px;
 }
+
 body {
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
@@ -38,17 +41,32 @@ body {
     color: black;
 }
 
-a:hover{
+a:hover {
     
     color: #52ab98 !important;
 }
-table {
+
+table{ 
     background-color:#ffffff;
-    border: 1px solid #ffffff;
     color: black;
-    padding:10px;
     width: 100%;
 }
-tr:nth-child(even) {
-    background-color: #c8d8e4;
-  }
+
+th, td {
+    border: 1px solid black;
+    width: 40px;
+}
+
+table.formTable tr, table.formTable td{
+    border: white;
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.fa-magnifying-glass {
+    color:#52ab98;
+}
+
+.fa-magnifying-glass:hover {
+    color:white;
+}
