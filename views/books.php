@@ -19,6 +19,19 @@
 </head>
 
 <body>
+
+<!--Must be included on every page that opens database-->
+<?php
+$servername = "98.157.243.73";
+$username = "groupuser";
+$password = "123";
+$dbname = "library";
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+$sql = "SELECT * FROM book";
+$result = mysqli_query($conn, $sql);
+
+?>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="../views/index.html"><strong>Book Borrower</strong></a>
         <form class="example" action="/action_page.php" style="margin-right:15px; max-width:300px">
@@ -45,14 +58,18 @@
     <div class="row">
         <div class="col-12">
             <table>
-                <h1 style="text-align:left;">Member list</h1>
+                <h1 style="text-align:left;">Books</h1>
                 <tr>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Name</th>
-                    <th>Zip Code</th>
+                    <th>ISBN</th>
+                    <th>Book Title</th>
+                    <th>Genre</th>
+                    <th>Author</th>
+                    <th>Date of Publication</th>
+                    <th>Availability</th>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -61,40 +78,53 @@
             </table>
         </div>
     </div>
-    <div class="row" style="margin-top: 30px;">
+</div>
+    <!--<div class="row" style="margin-top: 30px;">
         <div class="col-12">
-            <h1 style="text-align:left;">Become a member</h1>
+            <h1 style="text-align:left;">Add a book</h1>
             <form method="POST" action="form.php">
                 <table class="formTable">
                     <tr>
-                        <td>Email</td>
+                        <td>ISBN</td>
                         <td>
-                            <input type="email" name="memberEmail" id="memberEmail" maxlength="30" required>
+                            <input type="text" name="ISBN" id="ISBN" maxlength="13" required>
                         </td>
-                        <td>Phone Number</td>
+                        <td>Book Title</td>
                         <td>
-                            <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="10" required>
+                            <input type="text" name="bookTitle" id="bookTitle" maxlength="30" required>
                         </td>
-                        <td>Name</td>
+                        <td>Genre</td>
                         <td>
-                            <input type="text" name="memberName" id="memberName" maxlength="30"required>
+                            <input type="text" name="genre" id="genre" maxlength="30"required>
                         </td> 
-                        <td>Zip Code</td>
+                    </tr>
+                    <tr>
+                        <td>Author</td>
                         <td>
-                            <input type="text" name="zipCode" id="zipCode" maxlength="5"required>
-                        </td> 
+                            <input type="text" name="author" id="author" maxlength="30"required>
+                        </td>
+                        <td>Date of Publication</td>
+                        <td>
+                            <input type="date" name="dateOfPublication" id="dateOfPublication" required>
+                        </td>
+                        <td>Availability</td>
+                        <td>
+                            <select name="isCheckedOut" id="isCheckedOut" required>
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </td>
                     </tr>
                 </table>
                 <div class="text-right" style="margin-top: 30px;">
-                    <button type="submit" class="btn btn-success" style="width:200px;" value="Submit">
+                    <button type="button" class="btn btn-success" style="width:200px;" onclick="submit()" value="Submit">
                         <i class="fas fa-paper-plane"></i> Submit
                     </button>
                 </div>
             </form>
         </div>
     </div>
-</div>
-
+</div>-->
 <footer>
     <p>version 0.0.0</p>
 </footer>
