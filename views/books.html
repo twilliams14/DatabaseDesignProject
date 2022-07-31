@@ -21,10 +21,6 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="../views/index.html"><strong>Book Borrower</strong></a>
-        <form class="example" action="/action_page.php" style="margin-right:15px; max-width:300px">
-            <input type="text" placeholder="Search..." name="search2">
-            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,7 +41,13 @@
     <div class="row">
         <div class="col-12">
             <table>
-                <h1 style="text-align:left;">Books</h1>
+                <h1 style="text-align:left;">Books</h1> 
+                <div align="left" style="margin-bottom: 10px;">
+                    <form class="example" action="/action_page.php">
+                        <input type="text" placeholder="search books..." name="search2">
+                        <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
                 <tr>
                     <th>ISBN</th>
                     <th>Book Title</th>
