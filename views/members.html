@@ -60,31 +60,29 @@
     <div class="row" style="margin-top: 30px;">
         <div class="col-12">
             <h1 style="text-align:left;">Become a member</h1>
-            <form method="POST" action="form.php">
+            <form action="member.php" method="post/get" >
                 <table class="formTable">
                     <tr>
                         <td>Email</td>
                         <td>
-                            <input type="email" name="memberEmail" id="memberEmail" maxlength="30" required>
+                            <input type="email" name="email" id="email" maxlength="30" required>
                         </td>
                         <td>Phone Number</td>
                         <td>
-                            <input type="tel" name="phoneNumber" id="phoneNumber" maxlength="10" required>
+                            <input type="tel" name="phone_number" id="phone_number" maxlength="10" required>
                         </td>
                         <td>Name</td>
                         <td>
-                            <input type="text" name="memberName" id="memberName" maxlength="30"required>
+                            <input type="text" name="name" id="name" maxlength="30"required>
                         </td> 
                         <td>Zip Code</td>
                         <td>
-                            <input type="text" name="zipCode" id="zipCode" maxlength="5"required>
+                            <input type="text" name="zipcode" id="zipcode" maxlength="5"required>
                         </td> 
                     </tr>
                 </table>
                 <div class="text-right" style="margin-top: 30px;">
-                    <button type="submit" class="btn btn-success" style="width:200px;" value="Submit">
-                        <i class="fas fa-paper-plane"></i> Submit
-                    </button>
+                <button type="submit" name="Submit" id="Submite" class="btn btn-success" style="width:200px;" value="Submit">Submit</button>
                 </div>
             </form>
         </div>
